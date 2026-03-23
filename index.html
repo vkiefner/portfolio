@@ -34,6 +34,30 @@
             padding-bottom: 30px;
         }
         
+        .header-content {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        
+        .profile-photo {
+            flex-shrink: 0;
+        }
+        
+        .profile-photo img {
+            width: 180px;
+            height: 180px;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        
+        .header-text {
+            flex: 1;
+            min-width: 250px;
+        }
+        
         h1 {
             font-size: 2.2em;
             color: #1F4788;
@@ -49,6 +73,7 @@
         .contact-info {
             font-size: 0.95em;
             color: #555;
+            line-height: 1.8;
         }
         
         .contact-info a {
@@ -94,12 +119,14 @@
         .pub-authors {
             color: #666;
             font-size: 0.95em;
+            margin-bottom: 3px;
         }
         
         .pub-outlet {
             color: #666;
             font-size: 0.95em;
             font-style: italic;
+            margin-bottom: 5px;
         }
         
         .pub-status {
@@ -110,12 +137,12 @@
             border-radius: 3px;
             font-size: 0.85em;
             margin-top: 5px;
+            margin-bottom: 8px;
             font-weight: 500;
         }
         
         .pub-links {
             font-size: 0.9em;
-            margin-top: 8px;
         }
         
         .pub-links a {
@@ -137,6 +164,7 @@
             text-decoration: none;
             font-weight: 500;
             margin-bottom: 20px;
+            transition: background 0.3s ease;
         }
         
         .cv-link:hover {
@@ -158,16 +186,35 @@
             text-align: center;
         }
         
+        footer a {
+            color: #1F4788;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
         .research-area {
             background: #f5f5f5;
             padding: 20px;
             border-left: 4px solid #1F4788;
             margin: 20px 0;
             border-radius: 2px;
+            line-height: 1.8;
         }
         
         .research-area strong {
             color: #1F4788;
+        }
+        
+        ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
         }
         
         @media (max-width: 768px) {
@@ -182,29 +229,43 @@
             h2 {
                 font-size: 1.3em;
             }
+            
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .profile-photo {
+                flex-shrink: 0;
+            }
+            
+            .header-text {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <div style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
-                <div>
-                    <img src="images/profile.jpg" alt="Valentin Kiefner" style="width: 180px; height: 180px; border-radius: 8px; object-fit: cover; box-shadow: 0 2px 8px rgba(0,0,0,0.12);">
+            <div class="header-content">
+                <div class="profile-photo">
+                    <img src="images/profile.jpg" alt="Valentin Kiefner">
                 </div>
-                <div style="flex: 1; min-width: 250px;">
-            <h1>Valentin Kiefner</h1>
-            <p class="subtitle">Research & Teaching Associate</p>
-            <p class="subtitle">Institute for International Business, WU Vienna</p>
-            <div class="contact-info">
-                <strong>Email:</strong> <a href="/cdn-cgi/l/email-protection#6214030e070c160b0c4c090b07040c07102215174c03014c0316"><span class="__cf_email__" data-cfemail="5325323f363d273a3d7d383a36353d36211324267d32307d3227">[email&#160;protected]</span></a><br>
-                <strong>Phone:</strong> +43 (1) 31336 5771<br>
-                <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=JwNZJX0AAAAJ&hl=de&oi=ao">Profile</a>
+                <div class="header-text">
+                    <h1>Valentin Kiefner</h1>
+                    <p class="subtitle">Research & Teaching Associate</p>
+                    <p class="subtitle">Institute for International Business, WU Vienna</p>
+                    <div class="contact-info">
+                        <strong>Email:</strong> <a href="mailto:valentin.kiefner@wu.ac.at">valentin.kiefner@wu.ac.at</a><br>
+                        <strong>Phone:</strong> +43 (1) 31336 5771<br>
+                        <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=JwNZJX0AAAAJ&hl=de&oi=ao">Profile</a>
                     </div>
-            </div>
+                </div>
             </div>
         </header>
-
+ 
         <main>
             <section class="about">
                 <p>I am a researcher and educator in international business and corporate sustainability. My research focuses on the intersection of <strong>global value chains, multinational enterprises, and sustainable development</strong>. I am particularly interested in how firms balance competitive pressures with sustainability commitments, the role of digital technologies in enabling sustainability, and the impact of top management team diversity on corporate social responsibility.</p>
@@ -214,12 +275,12 @@
                 </div>
                 
                 <div style="margin-top: 30px;">
-                    <a href="files/CV_Kiefner_2025.pdf" class="cv-link">Download Full CV (PDF)</a>
+                    <a href="files/CV_Kiefner.pdf" class="cv-link">Download Full CV (PDF)</a>
                 </div>
             </section>
-
+ 
             <hr>
-
+ 
             <section>
                 <h2>Peer-Reviewed Publications</h2>
                 
@@ -233,7 +294,7 @@
                         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JwNZJX0AAAAJ&citation_for_view=JwNZJX0AAAAJ:u5HHAwkelHYC">Google Scholar</a>
                     </div>
                 </div>
-
+ 
                 <div class="publication">
                     <div class="pub-authors">Tihanyi, C., Mohr, A., Schumacher, C., & Kiefner, V.</div>
                     <div class="pub-title">When Does it Pay to Have a Chief Digital Officer?</div>
@@ -244,9 +305,9 @@
                     </div>
                 </div>
             </section>
-
+ 
             <hr>
-
+ 
             <section>
                 <h2>Working Papers & Manuscripts Under Review</h2>
                 
@@ -256,21 +317,21 @@
                     <div class="pub-outlet">Journal of International Business Studies (4* Journal)</div>
                     <div class="pub-status">Revise & Resubmit (Round 3)</div>
                 </div>
-
+ 
                 <div class="publication">
                     <div class="pub-title">The Contingent Effect of Supply Base Complexity on Firm Performance: The Moderating Role of the COVID-19 Pandemic</div>
                     <div class="pub-authors">Konara, P., Mohr, A., & Kiefner, V.</div>
                     <div class="pub-outlet">Journal of Operations Management (4* Journal)</div>
                     <div class="pub-status">Revise & Resubmit (Round 1)</div>
                 </div>
-
+ 
                 <div class="publication">
                     <div class="pub-title">International Diversification and Multinationals' Support of the UN's Sustainable Development Goals: The Moderating Role of Digital Technologies</div>
                     <div class="pub-authors">Kiefner, V., Mohr, A., & Tihanyi, C.</div>
                     <div class="pub-outlet">International Business Review (3* Journal)</div>
                     <div class="pub-status">Revise & Resubmit (Round 2)</div>
                 </div>
-
+ 
                 <div class="publication">
                     <div class="pub-title">When Backlash Meets Corporate Climate Action: Societal Polarization and the Relationship Between Top Management Team Diversity and Emissions Reduction in Multinationals</div>
                     <div class="pub-authors">Kiefner, V., Stahl, G., & Schumacher, C.</div>
@@ -278,9 +339,9 @@
                     <div class="pub-status">In Preparation</div>
                 </div>
             </section>
-
+ 
             <hr>
-
+ 
             <section>
                 <h2>Policy Engagement & Public Communication</h2>
                 
@@ -294,21 +355,21 @@
                     </div>
                 </div>
             </section>
-
+ 
             <hr>
-
+ 
             <section>
                 <h2>Teaching</h2>
                 <p>I teach courses at the graduate and undergraduate levels, with a focus on international business strategy, sustainability, and research methods. Since 2021, I have taught 11 distinct courses to approximately 560 students, offering 50.5 ECTS credits across multiple educational formats including semester courses, intensive international programs, and thesis coaching.</p>
                 
                 <p style="margin-top: 20px;"><strong>Current courses:</strong> International Business Applications (BSc), Global Strategy and International Alliances (BSc), International Business Strategy (International Programmes), Master's Thesis Coaching (MSc), and multiple international summer programmes.</p>
             </section>
-
+ 
             <hr>
-
+ 
             <section>
                 <h2>Selected Recent Activities</h2>
-                <ul style="margin-left: 20px; line-height: 1.8;">
+                <ul>
                     <li>Visiting PhD Researcher at Keio University, Tokyo (2022)</li>
                     <li>Co-developer and Instructor: Bangkok Summer School on International Business & Sustainable Development (2022–2025)</li>
                     <li>Supervisor: 18 Master's and Bachelor's theses on sustainability, SDGs, and international business</li>
@@ -316,9 +377,13 @@
                     <li>Elected Junior Faculty Representative, WU Vienna (2020–Present)</li>
                 </ul>
             </section>
-
+ 
         </main>
-
+ 
         <footer>
             <p>&copy; 2025 Valentin Kiefner. Last updated: March 2025.</p>
-            <p><a href="https://www.wu.ac.at/" 
+            <p><a href="https://www.wu.ac.at/">WU Vienna University of Economics and Business</a></p>
+        </footer>
+    </div>
+</body>
+</html>
