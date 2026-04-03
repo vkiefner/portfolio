@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentin Kiefner - International Business & Sustainability</title>
+    <title>Dr. Valentin Kiefner - Academic Profile</title>
     <style>
         * {
             margin: 0;
@@ -12,33 +12,27 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #fafafa;
-            padding: 40px 20px;
+            background-color: #f5f5f5;
         }
         
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
-            padding: 60px;
-            border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            padding: 40px 20px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         
         header {
-            margin-bottom: 40px;
-            border-bottom: 2px solid #1F4788;
-            padding-bottom: 30px;
-        }
-        
-        .header-content {
             display: flex;
-            gap: 40px;
+            gap: 30px;
+            margin-bottom: 40px;
             align-items: flex-start;
-            flex-wrap: wrap;
+            border-bottom: 3px solid #1F4788;
+            padding-bottom: 30px;
         }
         
         .profile-photo {
@@ -50,140 +44,199 @@
             height: 180px;
             border-radius: 8px;
             object-fit: cover;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            border: 2px solid #1F4788;
         }
         
-        .header-text {
+        .header-info {
             flex: 1;
-            min-width: 250px;
         }
         
         h1 {
-            font-size: 2.2em;
             color: #1F4788;
+            font-size: 2.2em;
             margin-bottom: 10px;
         }
         
-        .subtitle {
-            font-size: 1.1em;
+        .title {
+            font-size: 1.2em;
             color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .institution {
+            font-size: 1em;
+            color: #888;
             margin-bottom: 20px;
         }
         
         .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
             font-size: 0.95em;
-            color: #555;
-            line-height: 1.8;
         }
         
         .contact-info a {
             color: #1F4788;
             text-decoration: none;
-            border-bottom: 1px solid #1F4788;
+            transition: color 0.3s;
         }
         
         .contact-info a:hover {
-            background: #f0f0f0;
-        }
-        
-        .about {
-            margin: 40px 0;
-            font-size: 1em;
-            line-height: 1.8;
-            color: #444;
-        }
-        
-        section {
-            margin: 50px 0;
-        }
-        
-        h2 {
-            font-size: 1.5em;
-            color: #1F4788;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        
-        .publication {
-            margin-bottom: 25px;
-            line-height: 1.8;
-        }
-        
-        .pub-title {
-            font-weight: 600;
-            color: #1F4788;
-            margin-bottom: 5px;
-        }
-        
-        .pub-authors {
-            color: #666;
-            font-size: 0.95em;
-            margin-bottom: 3px;
-        }
-        
-        .pub-outlet {
-            color: #666;
-            font-size: 0.95em;
-            font-style: italic;
-            margin-bottom: 5px;
-        }
-        
-        .pub-status {
-            display: inline-block;
-            background: #e8f0f8;
-            color: #1F4788;
-            padding: 3px 8px;
-            border-radius: 3px;
-            font-size: 0.85em;
-            margin-top: 5px;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .pub-links {
-            font-size: 0.9em;
-        }
-        
-        .pub-links a {
-            color: #1F4788;
-            text-decoration: none;
-            margin-right: 15px;
-        }
-        
-        .pub-links a:hover {
+            color: #0d2847;
             text-decoration: underline;
         }
         
-        .cv-link {
+        .cv-button {
             display: inline-block;
-            background: #1F4788;
+            background-color: #1F4788;
             color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
+            padding: 12px 24px;
+            border-radius: 5px;
             text-decoration: none;
-            font-weight: 500;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+        
+        .cv-button:hover {
+            background-color: #0d2847;
+        }
+        
+        section {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #1F4788;
+            font-size: 1.6em;
             margin-bottom: 20px;
-            transition: background 0.3s ease;
+            border-bottom: 2px solid #1F4788;
+            padding-bottom: 10px;
         }
         
-        .cv-link:hover {
-            background: #162a5c;
+        h3 {
+            color: #333;
+            font-size: 1.1em;
+            margin-top: 15px;
+            margin-bottom: 10px;
         }
         
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 30px 0;
+        .research-focus {
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-left: 4px solid #1F4788;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .research-focus ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        .research-focus li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #1F4788;
+            margin-bottom: 15px;
+            border-radius: 3px;
+        }
+        
+        .highlight-box strong {
+            color: #1F4788;
+        }
+        
+        .publication {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #1F4788;
+        }
+        
+        .publication strong {
+            color: #1F4788;
+        }
+        
+        .publication em {
+            font-style: italic;
+            color: #555;
+        }
+        
+        .publication a {
+            color: #1F4788;
+            text-decoration: none;
+        }
+        
+        .publication a:hover {
+            text-decoration: underline;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1F4788;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 3px solid #1F4788;
+        }
+        
+        .skill-category strong {
+            color: #1F4788;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .skill-category p {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.5;
         }
         
         footer {
             margin-top: 60px;
-            padding-top: 30px;
+            padding-top: 20px;
             border-top: 1px solid #ddd;
-            font-size: 0.9em;
-            color: #999;
             text-align: center;
+            font-size: 0.9em;
+            color: #888;
         }
         
         footer a {
@@ -195,31 +248,11 @@
             text-decoration: underline;
         }
         
-        .research-area {
-            background: #f5f5f5;
-            padding: 20px;
-            border-left: 4px solid #1F4788;
-            margin: 20px 0;
-            border-radius: 2px;
-            line-height: 1.8;
-        }
-        
-        .research-area strong {
-            color: #1F4788;
-        }
-        
-        ul {
-            margin-left: 20px;
-            line-height: 1.8;
-        }
-        
-        ul li {
-            margin-bottom: 10px;
-        }
-        
         @media (max-width: 768px) {
-            .container {
-                padding: 30px;
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
             }
             
             h1 {
@@ -230,18 +263,12 @@
                 font-size: 1.3em;
             }
             
-            .header-content {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+            .container {
+                padding: 20px 15px;
             }
             
-            .profile-photo {
-                flex-shrink: 0;
-            }
-            
-            .header-text {
-                width: 100%;
+            .stats-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -249,140 +276,134 @@
 <body>
     <div class="container">
         <header>
-            <div class="header-content">
-                <div class="profile-photo">
-                    <img src="images/profile.jpg" alt="Valentin Kiefner">
+            <div class="profile-photo">
+                <img src="images/profile.jpg" alt="Dr. Valentin Kiefner">
+            </div>
+            <div class="header-info">
+                <h1>Dr. Valentin Kiefner</h1>
+                <p class="title">Postdoctoral Researcher</p>
+                <p class="institution">Institute for International Business<br>WU Vienna University of Economics & Business</p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:valentin.kiefner@wu.ac.at">valentin.kiefner@wu.ac.at</a></p>
+                    <p><strong>Phone:</strong> +43 (1) 31336-5771</p>
+                    <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=JwNZJX0AAAAJ&hl=de&oi=ao" target="_blank">Profile</a></p>
+                    <p><strong>ORCiD:</strong> <a href="https://orcid.org/0009-0008-6763-1065" target="_blank">0009-0008-6763-1065</a></p>
                 </div>
-                <div class="header-text">
-                    <h1>Valentin Kiefner</h1>
-                    <p class="subtitle">Research & Teaching Associate</p>
-                    <p class="subtitle">Institute for International Business, WU Vienna</p>
-                    <div class="contact-info">
-                        <strong>Email:</strong> <a href="mailto:valentin.kiefner@wu.ac.at">valentin.kiefner@wu.ac.at</a><br>
-                        <strong>Phone:</strong> +43 (1) 31336 5771<br>
-                        <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=JwNZJX0AAAAJ&hl=de&oi=ao">Profile</a>
-                    </div>
-                </div>
+                <a href="files/CV_Kiefner.pdf" class="cv-button" download>Download Full CV</a>
             </div>
         </header>
- 
-        <main>
-            <section class="about">
-                <p>I am a researcher and educator in international business and corporate sustainability. My research focuses on the intersection of <strong>global value chains, multinational enterprises, and sustainable development</strong>. I am particularly interested in how firms balance competitive pressures with sustainability commitments, the role of digital technologies in enabling sustainability, and the impact of top management team diversity on corporate social responsibility.</p>
-                
-                <div class="research-area">
-                    <strong>Research Focus:</strong> Global Value Chains • Corporate Sustainability & CSR • UN Sustainable Development Goals • Multinational Enterprises • Top Management Team Diversity • Digital Technologies & Sustainability
-                </div>
-                
-                <div style="margin-top: 30px;">
-                    <a href="files/CV_Kiefner.pdf" class="cv-link">Download Full CV (PDF)</a>
-                </div>
-            </section>
- 
-            <hr>
- 
-            <section>
-                <h2>Peer-Reviewed Publications</h2>
-                
-                <div class="publication">
-                    <div class="pub-authors">Kiefner, V., Mohr, A., & Schumacher, C.</div>
-                    <div class="pub-title">Female executives and multinationals' support of the UN's Sustainable Development Goals</div>
-                    <div class="pub-outlet">Journal of World Business, Vol. 57(3), 101304 (2022)</div>
-                    <div class="pub-status">Published</div>
-                    <div class="pub-links">
-                        <a href="https://doi.org/10.1016/j.jwb.2021.101304">DOI</a>
-                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JwNZJX0AAAAJ&citation_for_view=JwNZJX0AAAAJ:u5HHAwkelHYC">Google Scholar</a>
-                    </div>
-                </div>
- 
-                <div class="publication">
-                    <div class="pub-authors">Tihanyi, C., Mohr, A., Schumacher, C., & Kiefner, V.</div>
-                    <div class="pub-title">When Does it Pay to Have a Chief Digital Officer?</div>
-                    <div class="pub-outlet">Best Papers Proceedings / Academy of Management (2023)</div>
-                    <div class="pub-status">Published</div>
-                    <div class="pub-links">
-                        <a href="https://journals.aom.org/doi/abs/10.5465/AMPROC.2023.12432abstract">DOI</a>
-                    </div>
-                </div>
-            </section>
- 
-            <hr>
- 
-            <section>
-                <h2>Working Papers & Manuscripts Under Review</h2>
-                
-                <div class="publication">
-                    <div class="pub-title">Diversifying for Resilience: How Supply Base International Diversification Relates to Supply Base Sustainability Performance</div>
-                    <div class="pub-authors">Kiefner, V., Konara, P., Mohr, A., & Shirodkar, V.</div>
-                    <div class="pub-outlet">Journal of International Business Studies (4* Journal)</div>
-                    <div class="pub-status">Revise & Resubmit (Round 3)</div>
-                </div>
- 
-                <div class="publication">
-                    <div class="pub-title">The Contingent Effect of Supply Base Complexity on Firm Performance: The Moderating Role of the COVID-19 Pandemic</div>
-                    <div class="pub-authors">Konara, P., Mohr, A., & Kiefner, V.</div>
-                    <div class="pub-outlet">Journal of Operations Management (4* Journal)</div>
-                    <div class="pub-status">Revise & Resubmit (Round 1)</div>
-                </div>
- 
-                <div class="publication">
-                    <div class="pub-title">International Diversification and Multinationals' Support of the UN's Sustainable Development Goals: The Moderating Role of Digital Technologies</div>
-                    <div class="pub-authors">Kiefner, V., Mohr, A., & Tihanyi, C.</div>
-                    <div class="pub-outlet">International Business Review (3* Journal)</div>
-                    <div class="pub-status">Revise & Resubmit (Round 2)</div>
-                </div>
- 
-                <div class="publication">
-                    <div class="pub-title">When Backlash Meets Corporate Climate Action: Societal Polarization and the Relationship Between Top Management Team Diversity and Emissions Reduction in Multinationals</div>
-                    <div class="pub-authors">Kiefner, V., Stahl, G., & Schumacher, C.</div>
-                    <div class="pub-outlet">Academy of Management Journal</div>
-                    <div class="pub-status">In Preparation</div>
-                </div>
-            </section>
- 
-            <hr>
- 
-            <section>
-                <h2>Policy Engagement & Public Communication</h2>
-                
-                <div class="publication">
-                    <div class="pub-title">Women Leaders Increase Company Action on the SDGs</div>
-                    <div class="pub-authors">Kiefner, V.</div>
-                    <div class="pub-outlet">Network for Business Sustainability (2022)</div>
-                    <div class="pub-status">Published</div>
-                    <div class="pub-links">
-                        <a href="https://nbs.net/women-leaders-increase-company-action-on-the-sdgs/">Read Online</a>
-                    </div>
-                </div>
-            </section>
- 
-            <hr>
- 
-            <section>
-                <h2>Teaching</h2>
-                <p>I teach courses at the graduate and undergraduate levels, with a focus on international business strategy, sustainability, and research methods. Since 2021, I have taught 11 distinct courses to approximately 560 students, offering 50.5 ECTS credits across multiple educational formats including semester courses, intensive international programs, and thesis coaching.</p>
-                
-                <p style="margin-top: 20px;"><strong>Current courses:</strong> International Business Applications (BSc), Global Strategy and International Alliances (BSc), International Business Strategy (International Programmes), Master's Thesis Coaching (MSc), and multiple international summer programmes.</p>
-            </section>
- 
-            <hr>
- 
-            <section>
-                <h2>Selected Recent Activities</h2>
+
+        <section id="about">
+            <h2>Research Agenda</h2>
+            <div class="research-focus">
+                <p><strong>How do multinational enterprises navigate strategy and sustainability under conditions of geopolitical tension, geo-economic fragmentation, societal contestation, and persistent global development challenges?</strong></p>
+                <p style="margin-top: 12px; font-size: 0.95em; color: #555;">My research combines international business strategy, supply chain governance, and organizational leadership to understand:</p>
                 <ul>
-                    <li>Visiting PhD Researcher at Keio University, Tokyo (2022)</li>
-                    <li>Co-developer and Instructor: Bangkok Summer School on International Business & Sustainable Development (2022–2025)</li>
-                    <li>Supervisor: 18 Master's and Bachelor's theses on sustainability, SDGs, and international business</li>
-                    <li>Conference presentations at EIBA, AIB, EURAM, EIASM, and EAMSA</li>
-                    <li>Elected Junior Faculty Representative, WU Vienna (2020–Present)</li>
+                    <li><strong>MNE Sustainability Behavior:</strong> When and why firms support the UN SDGs; how leadership diversity influences sustainability-oriented decision-making</li>
+                    <li><strong>Global Value Chain Resilience:</strong> How supply base diversification and complexity affect firm performance under disruption</li>
+                    <li><strong>Strategy Under Uncertainty:</strong> How firms respond to nationalist and polarized environments; how digital technologies reshape global coordination</li>
                 </ul>
-            </section>
- 
-        </main>
- 
+            </div>
+        </section>
+
+        <section id="highlights">
+            <h2>Key Highlights</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Citations (JWB 2022)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">23</div>
+                    <div class="stat-label">Courses Taught</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">125</div>
+                    <div class="stat-label">ECTS (Teaching)</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">17+</div>
+                    <div class="stat-label">Theses Supervised</div>
+                </div>
+            </div>
+            
+            <h3>Recent Recognition</h3>
+            <div class="highlight-box">
+                <strong>PhD awarded with honors</strong> (March 2026) in Economic & Social Sciences, WU Vienna. Dissertation on corporate sustainability action in international business.
+            </div>
+            <div class="highlight-box">
+                <strong>3 R&R manuscripts</strong> at top-tier journals: Journal of International Business Studies, International Business Review, Journal of Operations Management.
+            </div>
+            <div class="highlight-box">
+                <strong>International experience</strong> including visiting researcher position at Keio University (Tokyo, 2022) and teaching in Bangkok and Sarajevo.
+            </div>
+        </section>
+
+        <section id="research-impact">
+            <h2>Selected Recent Work</h2>
+            
+            <h3>Published</h3>
+            <div class="publication">
+                <strong>Kiefner, V., Mohr, A., & Schumacher, C. (2022).</strong> Female executives and multinationals' support of the UN's Sustainable Development Goals. <em>Journal of World Business</em>, 57(3). <a href="https://doi.org/10.1016/j.jwb.2021.101304" target="_blank">DOI</a><br>
+                <small style="color: #888;">Shows how top management team gender diversity influences firm-level sustainability commitments. ~50 citations.</small>
+            </div>
+            
+            <div class="publication">
+                <strong>Tihanyi et al. (2023).</strong> When Does it Pay to Have a Chief Digital Officer? <em>Academy of Management Best Papers Proceedings</em>. <a href="https://doi.org/10.5465/AMPROC.2023.12432" target="_blank">DOI</a><br>
+                <small style="color: #888;">Academy of Management best paper award finalist.</small>
+            </div>
+            
+            <h3>Under Review</h3>
+            <p style="color: #666; font-size: 0.95em; margin-bottom: 10px;"><em>For complete publication list, see CV above</em></p>
+            <div class="highlight-box">
+                <strong>Supply chain resilience</strong> through international diversification (JIBS, R&R Round 3)
+            </div>
+            <div class="highlight-box">
+                <strong>International diversification and SDG prioritization</strong> in MNEs (IBR, R&R Round 3)
+            </div>
+            <div class="highlight-box">
+                <strong>Supply base complexity and firm performance</strong> during COVID-19 disruption (JOM, R&R Round 1)
+            </div>
+        </section>
+
+        <section id="expertise">
+            <h2>Technical Skills & Methods</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Data & Programming</strong>
+                    <p>Python (econometrics, causal inference, NLP, web scraping); R (data visualization); SQL (PostgreSQL, ETL workflows)</p>
+                </div>
+                <div class="skill-category">
+                    <strong>AI & Advanced Methods</strong>
+                    <p>LLMs & API-based workflows; structured outputs; RAG pipelines; prompt engineering; causal inference</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Academic & Reproducible Research</strong>
+                    <p>LaTeX typesetting; Git version control; panel data analysis; research design; statistical methods</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="teaching-impact">
+            <h2>Teaching & Mentorship</h2>
+            <p>I teach across undergraduate, MSc, and international programs with emphasis on connecting strategic frameworks to real-world challenges. Recent courses include:</p>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li><strong>Graduate:</strong> Research Design, Models of Internationalization, Export Management, Master Thesis Coaching</li>
+                <li><strong>Undergraduate:</strong> International Business Applications, Global Strategy and International Alliances</li>
+                <li><strong>International:</strong> Bangkok Summer School (3 weeks, global value chains & sustainability); Strategy Meets Finance (WU International Summer University)</li>
+            </ul>
+            <p style="margin-top: 15px; color: #666; font-size: 0.95em;">I emphasize analytical thinking, global awareness, and understanding how managerial decisions shape societies and markets. I have co-supervised 17+ completed theses and provide ongoing mentorship to junior researchers.</p>
+        </section>
+
+        <section id="community">
+            <h2>Professional Engagement</h2>
+            <p><strong>Academic Memberships:</strong> European International Business Academy (since 2021) • Academy of Management (since 2023) • European Academy of Management (since 2023) • Academy of International Business (since 2024)</p>
+            <p style="margin-top: 12px;"><strong>Leadership:</strong> Elected Junior Faculty Representative, Department of Global Business & Trade, WU Vienna (2025/2026)</p>
+            <p style="margin-top: 12px;"><strong>Languages:</strong> German (native) • English (fluent) • French (reading, writing) • Latin (reading)</p>
+        </section>
+
         <footer>
-            <p>&copy; 2025 Valentin Kiefner. Last updated: March 2025.</p>
-            <p><a href="https://www.wu.ac.at/">WU Vienna University of Economics and Business</a></p>
+            <p>&copy; 2026 Dr. Valentin Kiefner | <a href="https://www.wu.ac.at/iib/iib/teams/team-mohr/valentin-kiefner-1/" target="_blank">WU Vienna Profile</a></p>
         </footer>
     </div>
 </body>
