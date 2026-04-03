@@ -5,73 +5,77 @@
 \usepackage[english]{babel}
 \usepackage{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{xcolor}
 \usepackage{currvita}
 \usepackage[square,sort,comma,numbers]{natbib}
 \bibliographystyle{acm}
 \usepackage{bibentry}
-\usepackage{xcolor}
 \usepackage[colorlinks = true,
             linkcolor = blue,
             urlcolor  = blue,
             citecolor = blue,
             anchorcolor = blue]{hyperref}
 \usepackage{enumitem}
+
+\definecolor{darkblue}{HTML}{1F4788}
+\definecolor{lightgray}{HTML}{4A4A4A}
+
 \nobibliography*
 
-% \usepackage[margin=2.0cm]{geometry}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-% \usepackage[bottom=2.5cm,top=2.5cm]{geometry}
-
 \usepackage{titlesec}
 
 % Conditional printing 
-\newif\ifREFs% \REFsfalse (List of References)
-\newif\ifPersonalInfo % \PersonalInfofalse (Personal information)
+\newif\ifREFs
+\newif\ifPersonalInfo
 
-\PersonalInfotrue % Prints phone, gmail/skype, custom closing message
-\REFstrue % Prints references
+\PersonalInfotrue
+\REFstrue
 
 % Sections formatting
 \titleformat{\section}{\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule]
 \titleformat{\subsection}{\bfseries\raggedright\large}{}{0em}{}[]
 
 % Phone and Email as hyperlinks
-\usepackage{color}
 \newcommand\phone[1]{\href{tel:#1}{{\emailfont #1}}}
 \newcommand\email[1]{\href{mailto:#1}{{\emailfont #1}}}
 \newcommand\emailfont{\sffamily}
 
-% CV Info (to be customized).
+% CV Info
 \newcommand{\CVAuthor}{Dr. Valentin Kiefner}
-\newcommand{\CVTitle}{V.Kiefner_short_CV}
+\newcommand{\CVTitle}{V.Kiefner_CV}
 \newcommand{\CVWebpage}{https://www.wu.ac.at/iib/iib/teams/team-mohr/valentin-kiefner-1/}
 
 \ifPersonalInfo
-    \newcommand{\CVNote}{CV compiled on {\today} }
+    \newcommand{\CVNote}{CV compiled on {\today}}
 \else
     \newcommand{\CVNote}{CV compiled on {\today} for the website \CVWebpage}
 \fi
 
 \begin{document}
+
+\begin{cv}
+
 \begin{center}
 {\LARGE\textbf{\color{darkblue}Dr. Valentin Kiefner}}\\[6pt]
-{\large \textit{Postdoctoral Researcher}\\
+{\large \textit{Postdoctoral Researcher}}\\
 {\large Vienna University of Economics and Business}\\[12pt]
 \end{center}
+
 \section{Personal Information}
-  \begin{cvlist}{}
-  \item
+\begin{cvlist}{}
+\item
     Institute for International Business\\
     Department of Global Business \& Trade\\
     Welthandelsplatz 1, 1020\\
     Vienna, Austria
 
-  \item 
+\item 
     \ifPersonalInfo
         Birth date: 07 March 1994\\
         Place of birth: Hamburg, Germany\\
         Nationality: German\\
-    
+    \fi
     \ifPersonalInfo
         Tel.:~\phone{+43~(1)~31336-5771}\\
     \else
@@ -80,13 +84,12 @@
     Email:~\email{valentin.kiefner@wu.ac.at}\\
     Google Scholar: \href{https://scholar.google.com/citations?user=JwNZJX0AAAAJ&hl=de&oi=ao}{Profile}\\
     ORCiD: \href{https://orcid.org/0009-0008-6763-1065}{0009-0008-6763-1065}\\
-    Linkedin: \href{https://linkedin.com/in/valentin-kiefner/}{linkedin.com/in/valentin-kiefner}
+    LinkedIn: \href{https://linkedin.com/in/valentin-kiefner/}{linkedin.com/in/valentin-kiefner}
 
-  \end{cvlist}
-  
-% \vspace{-0.75cm}
+\end{cvlist}
+
 \section{Academic Positions}
-  \begin{cvlist}{}
+\begin{cvlist}{}
     \item[09/2020--Current]
       {\textbf{WU Vienna University of Economics \& Business}}\\
       {Position:} Research \& Teaching Associate\\
@@ -97,10 +100,10 @@
       {\textbf{WU Vienna University of Economics \& Business}}\\
       {Position:} Academic Tutor\\
       {Department:} Department of Global Business \& Trade\\
-  \end{cvlist}
+\end{cvlist}
 
 \section{International Appointments}
-  \begin{cvlist}{}
+\begin{cvlist}{}
     \item[08/2022--12/2022]
       {\textbf{Keio University}}\\
       {Position:} Visiting PhD Researcher\\
@@ -108,35 +111,35 @@
       {Location:} Tokyo, Japan\\
       {Funding:} International Research Fellow Program, WU Vienna\\
       {Supervisor:} Dr. Chie Iguchi
-  \end{cvlist}
+\end{cvlist}
 
 \section{Education}
-  \begin{cvlist}{}
+\begin{cvlist}{}
   \item[09/2020--03/2026] 
-      \textbf{Doctorate} {{\textbf{Economic \& Social Sciences (with honors)}}}\\ 
+      \textbf{Doctorate} {{\textbf{Economic \& Social Sciences (with honors)}}}\\
       WU University of Economics \& Business, Vienna, Austria\\
-      \textbf{Thesis:} {"Corporate Sustainability Action in International Business: Success Factors for Strategic Implementation and Challenges for Operational Realization"}\\
+      \textbf{Thesis:} Corporate Sustainability Action in International Business: Success Factors for Strategic Implementation and Challenges for Operational Realization\\
       \textbf{Advisor:} {Univ.-Prof.Dr. Alexander Mohr}\\
       \textbf{Co-Advisor:} {Univ.-Prof.Dr. Jonas Puck}\\
       \textbf{Co-Advisor:} {Prof. Hafiz Mirza}
       
-    \item[02/2022--current] 
-      \textbf{Micro Master} {{\textbf{Statistics \& Data Science (MITx)}}}\\ 
-      MIT’s Institute for Data, Systems, and Society (IDSS), online on \href{https://idss.mit.edu/academics/micromasters-program-in-statistics-and-data-science-sds/}{eDx}
+    \item[02/2022--Current] 
+      \textbf{Micro Master} {{\textbf{Statistics \& Data Science (MITx)}}}\\
+      MIT's Institute for Data, Systems, and Society (IDSS), online on \href{https://idss.mit.edu/academics/micromasters-program-in-statistics-and-data-science-sds/}{eDx}
+      
   \item[09/2018--08/2020] 
       \textbf{MSc} {{\textbf{Export \& Internationalization Management (with honors)}}}\\
       WU University of Economics \& Business, Vienna, Austria\\
-      \textbf{Thesis:} "Small Firms - Big Cases: SMEs in the Context of International Investment Disputes" \\
+      \textbf{Thesis:} Small Firms - Big Cases: SMEs in the Context of International Investment Disputes\\
       \textbf{Advisor:} {Mag.Dr. Simon Hartmann}
       
   \item[03/2013--03/2017] 
       \textbf{BA} {{\textbf{Corporate Management \& Economics}}}\\
       Zeppelin University, Friedrichshafen, Germany\\
-      \textbf{Thesis:} "Establishing Linkages Between Leadership and Emotional Intelligence – The Case of the Narcissistic Leader"\\
+      \textbf{Thesis:} Establishing Linkages Between Leadership and Emotional Intelligence -- The Case of the Narcissistic Leader\\
       \textbf{Advisor:} {Prof.Dr. Carmen Tanner}
-  \end{cvlist}
-  
-%\vspace{-1cm}
+\end{cvlist}
+
 \section{Publications}
 
 \subsection{Journal Publications}
@@ -144,8 +147,8 @@
     \item[2022]
       \textbf{Kiefner, V.}, Mohr, A., \& Schumacher, C. (2022). 
       Female executives and multinationals' support of the UN's Sustainable Development Goals. 
-      \textit{Journal of World Business}, Vol.{57}(3), DOI: \href{https://www.sciencedirect.com/science/article/pii/S1090951621001152}{10.1016/j.jwb.2021.101304}\\ 
-      (4 Journal – AJG 2024) | Citations: $\sim$50 | Media Coverage: 10+ outlets
+      \textit{Journal of World Business}, 57(3), DOI: \href{https://doi.org/10.1016/j.jwb.2021.101304}{10.1016/j.jwb.2021.101304}\\
+      (4* Journal -- AJG 2024) | Citations: $\sim$50 | Media Coverage: 10+ outlets
 \end{cvlist}
 
 \subsection{Conference Proceedings}
@@ -153,7 +156,7 @@
     \item[2023]
       Tihanyi, C., Mohr, A., Schumacher, C., \& \textbf{Kiefner, V.} (2023). 
       When Does it Pay to Have a Chief Digital Officer? 
-      \textit{Best Papers Proceedings / Academy of Management}, DOI: \href{https://journals.aom.org/doi/abs/10.5465/AMPROC.2023.12432abstract}{10.5465/AMPROC.2023.12432}\\ 
+      \textit{Best Papers Proceedings / Academy of Management}, DOI: \href{https://doi.org/10.5465/AMPROC.2023.12432}{10.5465/AMPROC.2023.12432}\\
 \end{cvlist}
 
 \subsection{Manuscripts in Revision}
@@ -161,22 +164,22 @@
     \item[2026]
       \textbf{Kiefner, V.}, Konara, P., Mohr, A., \& Shirodkar, V. (2024). 
       Diversifying for Resilience: How Supply Base International Diversification Relates to Supply Base Sustainability Performance.\\
-      \textbf{Outlet:} \textit{Journal of International Business Studies} (4* Journal – AJG 2024) \\
+      \textbf{Outlet:} \textit{Journal of International Business Studies} (4* Journal -- AJG 2024)\\
       \textbf{Status:} R\&R Round 3, initiated 06-Mar-2026
 
     \item[2026]
       \textbf{Kiefner, V.}, Mohr, A., \& Tihanyi, C. (2024). 
-      International Diversification and Multinationals' Support of the UN's Sustainable Development Goals: The moderating Role of Digital Technologies. \\
-      \textbf{Outlet:} \textit{International Business Review} (3 Journal – AJG 2024) \\
+      International Diversification and Multinationals' Support of the UN's Sustainable Development Goals: The Moderating Role of Digital Technologies.\\
+      \textbf{Outlet:} \textit{International Business Review} (3* Journal -- AJG 2024)\\
       \textbf{Status:} R\&R Round 3, initiated 03-Mar-2026
 
     \item[2025]
       Konara, P., Mohr, A., \& \textbf{Kiefner, V.} (2023). 
-      The contingent effect of supply base complexity on firm performance: The moderating role of the Covid-19 pandemic.\\
-      \textbf{Outlet:} \textit{Journal of Operations Management} (4* Journal – AJG 2024) \\
+      The Contingent Effect of Supply Base Complexity on Firm Performance: The Moderating Role of the COVID-19 Pandemic.\\
+      \textbf{Outlet:} \textit{Journal of Operations Management} (4* Journal -- AJG 2024)\\
       \textbf{Status:} R\&R Round 1, initiated 07-Apr-2025 (additional data collection in-process)
 \end{cvlist}
- 
+
 \subsection{Working Papers}
 \begin{cvlist}{}
     \item[In Preparation]
@@ -191,7 +194,6 @@
 \end{cvlist}
 
 \section{Invited Academic Conferences}
- 
 \begin{cvlist}{}
     \item[2025]
     \textbf{AIB USNE 2025 Conference}: Global Business in a Time of Geopolitical Uncertainty. Bryant University, Rhode Island, USA. \textit{Academy of International Business US Northeast Chapter}
@@ -209,12 +211,11 @@
     \textbf{38\textsuperscript{th} EAMSA Annual Conference}: Achieving the Sustainable Development Goals: Prospects and Implications for Euro-Asia Business. Keio University, Tokyo, Japan. \textit{Euro-Asia Management Studies Association}
     
     \item[2022]
-    \textbf{11\textsuperscript{th} EIASM Workshop on TMTs}: Strategic Leadership for Sustainability and Social and Political Responsibility. École des Hautes Études Commerciales (HEC), Paris, France. \textit{European Institute for Advanced Studies in Management}
+    \textbf{11\textsuperscript{th} EIASM Workshop on TMTs}: Strategic Leadership for Sustainability and Social and Political Responsibility. HEC Paris, France. \textit{European Institute for Advanced Studies in Management}
     
     \item[2021]
-    \textbf{47\textsuperscript{th} EIBA Annual Conference 2021}: Firms, Innovation and Location: Reshaping International Business for Sustainable Development in the Post-Pandemic Era. Universidad Complutense, Madrid, Spain. \textit{European International Business Academy}
+    \textbf{47\textsuperscript{th} EIBA Annual Conference}: Firms, Innovation and Location. Universidad Complutense, Madrid, Spain. \textit{European International Business Academy}
 \end{cvlist}
-
 
 \section{Awards, Research Grants, and Scholarships}
 \begin{cvlist}{}
@@ -242,26 +243,26 @@ International Programs & 3 & 6 & $\sim$210 & 15 \\ \hline
 
 \subsection{Graduate-Level Courses}
 \begin{enumerate}
-    \item \textbf{Research Design} (Summer 2026). MSc Export \& Internationalization Management, WU Vienna, Austria. Co-instructor. $\sim$30 students. 5 ECTS. Programme course.
-    \item \textbf{Models of Internationalization} (Winter 2021--2024). MSc Export \& Internationalization Management, WU Vienna, Austria. Co-instructor. $\sim$120 students. 5 ECTS. Programme course.
-    \item \textbf{Master Thesis Coaching} (Summer 2021--2024). MSc Export \& Internationalization Management, WU Vienna, Austria. Thesis coach/Co-instructor. $\sim$20 students. 2 ECTS. Programme course.
-    \item \textbf{Export Management} (Winter 2022/2023). MSc Export \& Internationalization Management, WU Vienna, Austria. Co-instructor. $\sim$120 students. 7.5 ECTS. Programme course.
-    \item \textbf{SME Management} (Winter 2021/2022). MSc Export \& Internationalization Management, WU Vienna, Austria. Co-instructor. $\sim$120 students. 7.5 ECTS. Programme course.
-    \item \textbf{Research Design / Literature Seminar} (Summer 2021/2022). MSc Export \& Internationalization Management, WU Vienna, Austria. Co-instructor. $\sim$30 students. 5 ECTS. Programme course.
+    \item \textbf{Research Design} (Summer 2026). MSc Export \& Internationalization Management, WU Vienna. Co-instructor. $\sim$30 students. 5 ECTS.
+    \item \textbf{Models of Internationalization} (Winter 2021--2024). MSc Export \& Internationalization Management, WU Vienna. Co-instructor. $\sim$120 students. 5 ECTS.
+    \item \textbf{Master Thesis Coaching} (Summer 2021--2024). MSc Export \& Internationalization Management, WU Vienna. Thesis coach/Co-instructor. $\sim$20 students. 2 ECTS.
+    \item \textbf{Export Management} (Winter 2022/2023). MSc Export \& Internationalization Management, WU Vienna. Co-instructor. $\sim$120 students. 7.5 ECTS.
+    \item \textbf{SME Management} (Winter 2021/2022). MSc Export \& Internationalization Management, WU Vienna. Co-instructor. $\sim$120 students. 7.5 ECTS.
+    \item \textbf{Research Design / Literature Seminar} (Summer 2021/2022). MSc Export \& Internationalization Management, WU Vienna. Co-instructor. $\sim$30 students. 5 ECTS.
 \end{enumerate}
- 
+
 \subsection{Undergraduate-Level Courses}
 \begin{enumerate}
-    \item \textbf{International Business Applications} (Summer 2025). BSc International Business, WU Vienna, Austria. Course leader. $\sim$30 students. 5 ECTS. Specialization course.
-    \item \textbf{Global Strategy and International Alliances} (Winter 2024). BSc International Business, WU Vienna, Austria. Co-instructor. $\sim$30 students. 5 ECTS. Specialization course.
-    \item \textbf{International Business Strategy} (Winter 2024). International programmes (international students), WU Vienna, Austria. Co-instructor. $\sim$30 students. 5 ECTS. Course offering for international students.
+    \item \textbf{International Business Applications} (Summer 2025). BSc International Business, WU Vienna. Course leader. $\sim$30 students. 5 ECTS.
+    \item \textbf{Global Strategy and International Alliances} (Winter 2024). BSc International Business, WU Vienna. Co-instructor. $\sim$30 students. 5 ECTS.
+    \item \textbf{International Business Strategy} (Winter 2024). International programmes, WU Vienna. Co-instructor. $\sim$30 students. 5 ECTS.
 \end{enumerate}
 
 \subsection{International Programs \& Summer Schools}
 \begin{enumerate}
-    \item \textbf{Strategy Meets Finance} (International Summer University 2025). WU Vienna, Austria. Co-developer \& instructor. $\sim$30 students. 5 ECTS. Two-week intensive programme for incoming international students (co-taught with PD Dr.~Jakob Müllner).
-    \item \textbf{International Business \& Sustainable Development} (Bangkok Summer School 2022--2025). Mahidol University -- CMMU (Thailand). Co-developer \& instructor. $\sim$40 students. 8 ECTS. Three-week intensive programme on global value chains, corporate sustainability, and UNSDGs.
-    \item \textbf{Entrepreneurship and Sustainable Development in International Business} (Summer 2023). University of Sarajevo, Bosnia and Herzegovina. Co-developer \& instructor. $\sim$20 students. 2 ECTS. Erasmus+ International Short Program (funded by European Commission).
+    \item \textbf{Strategy Meets Finance} (International Summer University 2025). WU Vienna. Co-developer \& instructor. $\sim$30 students. 5 ECTS. Co-taught with PD Dr.~Jakob Müllner.
+    \item \textbf{International Business \& Sustainable Development} (Bangkok Summer School 2022--2025). Mahidol University, Thailand. Co-developer \& instructor. $\sim$40 students. 8 ECTS.
+    \item \textbf{Entrepreneurship and Sustainable Development in International Business} (Summer 2023). University of Sarajevo, Bosnia. Co-developer \& instructor. $\sim$20 students. 2 ECTS. Erasmus+ Program.
 \end{enumerate}
 
 \section{Thesis Supervision}
@@ -269,72 +270,67 @@ International Programs & 3 & 6 & $\sim$210 & 15 \\ \hline
 \subsection{Master Level Theses (Co-supervisor)}
 
 \begin{enumerate}
-    \item \textbf{Emanuel Frank} (2024, completed). Sustainability Implementation in Logistics Companies: The Influencing Role of the Insurance Sector. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC17088491}
+    \item \textbf{Emanuel Frank} (2024). Sustainability Implementation in Logistics Companies. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC17088491}
     
-    \item \textbf{Maximilian Müller-Guttenbrunn} (2023, completed). Measures to Increase Electronic Waste Collection Rates: An Integrative Literature Review. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC17010455}
+    \item \textbf{Maximilian Müller-Guttenbrunn} (2023). Measures to Increase Electronic Waste Collection Rates. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC17010455}
     
-    \item \textbf{Marcel Krainz} (2023, completed). Does Sustainability Increase Firm Performance? A Panel Data Analysis During the COVID-19 Pandemic. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC17083758}
+    \item \textbf{Marcel Krainz} (2023). Does Sustainability Increase Firm Performance? A Panel Data Analysis During COVID-19. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC17083758}
     
-    \item \textbf{Luca Anton Christandl} (2023, completed). Circular Economy: Development of a Holistic Model for Circular Transition in the Manufacturing Industry. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC17026452}
+    \item \textbf{Luca Anton Christandl} (2023). Circular Economy: Development of a Holistic Model. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC17026452}
     
-    \item \textbf{Theresa Hirsch} (2023, completed). Success Factors for Cybersecurity Adoption in Austrian SMEs: Assessing the Threat Landscape and Developing a Framework Applicable for SMEs. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC17022329}
+    \item \textbf{Theresa Hirsch} (2023). Success Factors for Cybersecurity Adoption in Austrian SMEs. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC17022329}
     
-    \item \textbf{Belinda Beimrohr} (2023, completed). Empowering Environmental Sustainability in the Austrian Hotel Industry: Identifying Drivers for Sustainable Energy Measures. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC17025457}
+    \item \textbf{Belinda Beimrohr} (2023). Empowering Environmental Sustainability in the Austrian Hotel Industry. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC17025457}
     
-    \item \textbf{Mariam Rashwan} (2023, completed). Pathways to Achieving the UN Sustainable Development Goals: The Role of Multinational Enterprises in Austria and Digitalization Measures for SDG Implementation. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16984544}
+    \item \textbf{Mariam Rashwan} (2023). Pathways to Achieving the UN SDGs: The Role of MNEs in Austria. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16984544}
     
-    \item \textbf{Philipp Wersch} (2022, completed). Challenges When Monitoring Sub-suppliers with Regards to Environmental Sustainability. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16698539}
+    \item \textbf{Philipp Wersch} (2022). Challenges When Monitoring Sub-suppliers. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16698539}
     
-    \item \textbf{Bettina Stöllinger} (2022, completed). Benefits of Being Part of the Solution: Sustainable Development Goals as a Promoter of Dynamic Green Capabilities. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16706131}
+    \item \textbf{Bettina Stöllinger} (2022). Benefits of Being Part of the Solution: SDGs as a Promoter of Dynamic Green Capabilities. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16706131}
     
-    \item \textbf{Bernhard Wieseneder} (2022, completed). Corporate Sustainability Disclosure of Austrian Listed Companies: A Systematic Content Analysis. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16693373}
+    \item \textbf{Bernhard Wieseneder} (2022). Corporate Sustainability Disclosure of Austrian Listed Companies. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16693373}
     
-    \item \textbf{Charlott Sophie Mahler} (2022, completed). Global Cities: Location Choice and Performance Outcomes. Is There a Zone of Optimal Performance for Foreign Subsidiaries in Vienna? WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16713128}
+    \item \textbf{Charlott Sophie Mahler} (2022). Global Cities: Location Choice and Performance Outcomes. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16713128}
     
-    \item \textbf{Stella Henriette Pohlner} (2022, completed). Sustainability in Automotive First-tier Supply Chains: How Can Automotive Focal Firms Implement Their Sustainability Standards into Their First-tier Supplier Relationships? WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16734910}
+    \item \textbf{Stella Henriette Pohlner} (2022). Sustainability in Automotive First-tier Supply Chains. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16734910}
     
-    \item \textbf{Doris Vindl} (2022, completed). Institutional Factors and Environmental Disclosure: An Emerging Market Perspective. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16678927}
+    \item \textbf{Doris Vindl} (2022). Institutional Factors and Environmental Disclosure. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16678927}
     
-    \item \textbf{Angelo Eder} (2021, completed). The Influence of Digitalization on SME Firm Performance During the COVID-19 Pandemic: A Qualitative Case Study. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16664543}
+    \item \textbf{Angelo Eder} (2021). The Influence of Digitalization on SME Firm Performance During COVID-19. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16664543}
     
-    \item \textbf{Rico Schöffmann} (2021, completed). Implementation of Codes of Conduct Guidelines Across Global Supply Chains: A Literature Review on Sustainable Supply Chain Management in International Business Research. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16421544}
+    \item \textbf{Rico Schöffmann} (2021). Implementation of Codes of Conduct Guidelines Across Global Supply Chains. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16421544}
     
-    \item \textbf{Melanie Sochatzy} (2021, completed). Sustainable Supply Chain Management in Multinational Enterprises and the Effect of Stakeholder Pressure: A Cross-Industry Multiple Case Study. WU Vienna, Austria. \url{https://permalink.obvsg.at/wuw/AC16404566}
+    \item \textbf{Melanie Sochatzy} (2021). Sustainable Supply Chain Management in MNEs and Stakeholder Pressure. WU Vienna. \url{https://permalink.obvsg.at/wuw/AC16404566}
 \end{enumerate}
 
 \subsection{Bachelor Level Theses (Co-supervisor)}
 
 \begin{enumerate}
-    \item \textbf{Julia Leitner} (2021, completed). A Systematic Literature Review on the Global Dimension of Corporate Sustainability in International Business (IB) Research. WU Vienna, Austria.
+    \item \textbf{Julia Leitner} (2021). A Systematic Literature Review on the Global Dimension of Corporate Sustainability in IB Research. WU Vienna.
 \end{enumerate}
-
 
 \section{Schools and Workshops Attended}
 \begin{cvlist}{}
-    \item[{Feb 2026}] Artificial Intelligence and Large Language Models for Social Scientist. \textit{WU Vienna University}, AT
-    \item[{Jan 2026}] Reproducible Research with Python. \textit{WU Vienna University}, AT
-    \item[{Mar 2022}] Applied Quantitative Methods. \textit{Copenhagen Business School}, DK
-    \item[{Nov 2020}] Theory of the MNE \& Economics of IB. \textit{Henley Business School}, UK
+    \item[Feb 2026] Artificial Intelligence and Large Language Models for Social Scientists. WU Vienna, AT
+    \item[Jan 2026] Reproducible Research with Python. WU Vienna, AT
+    \item[Mar 2022] Applied Quantitative Methods. Copenhagen Business School, DK
+    \item[Nov 2020] Theory of the MNE \& Economics of IB. Henley Business School, UK
 \end{cvlist}
 
 \section{Community Services}
-\subsection{Department Conference}
+\subsection{Department Leadership}
 \begin{cvlist}{}
-\item \begin{enumerate}[leftmargin=-2cm]
-        \item \textit{Elected Junior Faculty Representative} {(2025/2026)}: Department of Global Business \& Trade
-    \end{enumerate}
-\end{cvlist}
-\subsection{Academic Memberships}
-\begin{cvlist}{}
-\item \begin{enumerate}[leftmargin=-2cm]
-        \item \textit{European International Business Academy} {(since 2021)}
-        \item \textit{Academy of Management} {(since 2023)}
-        \item \textit{European Academy of Management} {(since 2023)}
-        \item \textit{Academy of International Business} {(since 2024)}
-    \end{enumerate}
+\item Elected Junior Faculty Representative (2025/2026): Department of Global Business \& Trade
 \end{cvlist}
 
-%   \vspace{-1cm}
+\subsection{Academic Memberships}
+\begin{cvlist}{}
+\item European International Business Academy (since 2021)
+\item Academy of Management (since 2023)
+\item European Academy of Management (since 2023)
+\item Academy of International Business (since 2024)
+\end{cvlist}
+
 \section{Languages}
 German (native -- speaking, reading, writing); English (fluent -- speaking, reading, writing); French (Baccalauréat général); Latin (Great Latinum)
 
@@ -346,37 +342,35 @@ LLMs \& AI (API-based workflows, structured outputs, RAG pipelines, prompt engin
 \LaTeX{} and Git (academic typesetting, version control, reproducible research)
 
 \section{Personal Interests}
-Triathlon (Ironman finisher 2024/2025), trail running (ultramarathon), friends and good discussions, mountaineering and snowboarding (often Alps), passionate cook, interested in classical music, literature, and cinema.
+Triathlon (Ironman finisher 2024/2025), trail running (ultramarathon), mountaineering and snowboarding (often Alps), passionate cook, classical music, literature, and cinema.
 
 \newpage
-% \vspace{1cm}
-\ifREFs% \ALLfalse
+
+\ifREFs
 \section{References}
-  \begin{cvlist}{}
+\begin{cvlist}{}
   \item[\textbf{Prof. Dr. Günter K. Stahl}] (Mentor)
-  \item[~ ~{Position:}]  Professor at Vienna University of Economics \& Business 
-  \item[~ ~{Institute:}]  Institute for Responsibility and Sustainability in Global Business (RSGBI)
-  \item[~ ~{Address:}]   Welthandelsplatz 1, 1020 Vienna, Austria
+  \item[~ ~{Position:}]  Professor, Vienna University of Economics \& Business
+  \item[~ ~{Institute:}]  Institute for Responsibility and Sustainability in Global Business
   \item[~ ~{Email:}]     \href{mailto:guenter.stahl@wu.ac.at}{guenter.stahl@wu.ac.at}
-  \item[\textbf{Prof. Dr. Jonas Puck}]  (Ph.D. Co-Advisor)
-  \item[~ ~{Position:}]  Professor at Vienna University of Economics \& Business 
-  \item[~ ~{Department:}] Institute of International Business (IIB)
-  \item[~ ~{Address:}]   Welthandelsplatz 1, 1020 Vienna, Austria
+  
+  \item[\textbf{Prof. Dr. Jonas Puck}] (Ph.D. Co-Advisor)
+  \item[~ ~{Position:}]  Professor, Vienna University of Economics \& Business
+  \item[~ ~{Institute:}]  Institute of International Business
   \item[~ ~{Email:}]     \href{mailto:jonas.puck@wu.ac.at}{jonas.puck@wu.ac.at}
-  \item[\textbf{Prof. Palitha Konara PhD}]  (Co-author)
-  \item[~ ~{Position:}]  Professor at University of Essex
-  \item[~ ~{Department:}] Strategy, Operations and Entrepreneurship (SOE)
-  \item[~ ~{Address:}]   Wivenhoe Park, Colchester CO4 3SQ, UK
+  
+  \item[\textbf{Prof. Palitha Konara, PhD}] (Co-author)
+  \item[~ ~{Position:}]  Professor, University of Essex
+  \item[~ ~{Department:}] Strategy, Operations and Entrepreneurship
   \item[~ ~{Email:}]     \href{mailto:pk22596@essex.ac.uk}{pk22596@essex.ac.uk}
+\end{cvlist}
 \fi
-  \vfill
-  \hfill\cvplace{Vienna - Austria}
-  \flushright
+
+\vfill
+\hfill\cvplace{Vienna -- Austria}
 
 \end{cv}
+
 \nobibliography{damas_cv}
 
 \end{document}
-\endinput
-%%
-%% End of file `cvtest.tex'.
